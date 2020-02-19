@@ -6,16 +6,17 @@
 function isPrime(n) {
     
     for(let index = 2; index < n; index++) {
+
         if (n % index == 0) {
             return Boolean(false);
         }
+        
     }
     return Boolean(true);
         
 }
 
 function getNPrimes(n) {
-    
     var i = 0;
     var start = 2;
     var primeList = [];
@@ -29,28 +30,24 @@ function getNPrimes(n) {
         }
     } 
     return primeList;
+
+    /*else {
+        console.log("Insert number");
+    }*/
     
 }
 
 function printNPrimes(n) {
-    
-    let p_table = document.querySelector("#prime_table");
-    for (let i in getNPrimes(n)) {
-        var row = document.createElement("tr");
-        var cell = document.createElement("td");
-        cell.innerHTML = getNPrimes(n)[i];
-        row.append(cell);
-        p_table.append(row);
-    }
-    
+    console.log(getNPrimes(n));
 }
 
 function greetByName() {
 
-    let params = new URLSearchParams(window.location.search);
-    let name = params.get('name') || 'Student';    
-    let number = params.get('n') || 330;     
-    let greet = document.querySelector('h1');    
+    const urlSearchParams = window.location.search; // HOW DO I USE THIS TO GET COLOR, NAME?
+    // let params = new URLSearchParams(window.location.search);
+    let name = urlSearchParams.get('name') || 'Student';    // document.querySelector('color');
+    let number = urlSearchParams.get('number');     // document.querySelector('name');
+    let greet = document.querySelector('h1');    // document.querySelector("h1");
     greet.innerHTML = `Hello ${name}`;
     
     testPrime(number);
@@ -58,17 +55,25 @@ function greetByName() {
 
 }
 
-function testPrime(the_number) {
+function testPrime(new_number) {
     
-    let declare = document.querySelector("#declare");
+    let the_number = new_number || 330;
+    let declare = document.querySelectorAll(".declare");
     if (isPrime(the_number) == Boolean(true)) {
         declare.innerHTML = `${the_number} is a prime number`;
     } else {
         declare.innerHTML = `${the_number} is not a prime number`;
     }
+
+    /*let all_p = document.querySelectorAll(".para");
+    for (let p of all_p) {
+        p.setAttribute("style", `color:${the_color}`);
+    }*/
     
 }
 
 window.onload = function() {
+    
     this.greetByName();
+
 };

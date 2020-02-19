@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Document Notes</title>
+    
+<!--..notes/class_3$ python3 -m http.server-->
+<!--output: Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/)-->
+<!--0.0.0.0 generic ip address-->
+<!--255.255.255.255 Broadcast, contact all machines in network-->
+<!-- inspect, Network, disable cache -->
+<!-- Document Object Model DOM: its good but you want to find the connecting thing with class and id -->
+<!-- inspect, console, -->
+
+<!-- all_p = document.querySelectorAll("p")
+for (p of all_p) {p.innerHTML = "Hi there"}  -->
+<!--use innerHTML to put insert html
+innerText inserts html as regular text-->
+<!--document.querySelectorAll(".para")
+    document.querySelector("#first")-->
+<!-- c = document.querySelector("#content") 
+    p = document.createElement("p") 
+    <p></p>
+    p.classList = "para"
+    p.setAttribute("id", "third")
+    p.innerHTML = "This is a new paragraph"
+    c.append(p) copy paste to js-->
+<!-- let pi = document.querySelector(#first);
+document.removeChild(pi);-->
+
+<!-- if you call the script early, not at the end of the page, it will try to append to null, elements/body not created yet.-->
+
+<!-- localhost:8000/?name=Alice&color=white -->
+
+</head>
+<body>
+    <h1>This is the Title</h1>
+    <div id="content">
+        <p class="para" id="first">Let's Go!</p>
+        <p class="para" id="second">I don't want to be cold.</p>
+        <!-- Don't worry about quotes for class and id. -->
+    </div>
+    <input type="button" id="theButton" onclick="doSomething('red')" value="Click Me">
+    <button id="anotherButton" onclick="doSomething('blue')">Click Me, Too!</button>
+    <script type="text/javascript" src="js_events.js"></script>
+</body>
+</html>
