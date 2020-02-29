@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/bootstrap.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/bootstrap.css"> <!-- crossorigin="anonymous"> --> 
         <link rel="stylesheet" href="css/calculator.css" type="text/css">
     </head>
     
     <body>
+        <div class="calculator">
+            <div class="row">
+                <button class="btn btn-secondary btn-lg btn-block"">Answer</button>
+            </div>
+            <div class="row" >
+                <button class="btn btn-primary btn-lg btn-block" id="clear" onclick="clearCalculator()">C</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-light small" id="1" onclick="onStack(1)">1</button>
+                <button class="btn btn-light small" id="2" onclick="onStack(2)">2</button>
+                <button class="btn btn-light small" id="3" onclick="onStack(3)">3</button>
+                <button class="btn btn-light small" id="4" onclick="onStack(4)">4</button>
+                <button class="btn btn-light small" id="5" onclick="onStack(5)">5</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-light small" id="6" onclick="onStack(6)">6</button>
+                <button class="btn btn-light small" id="7" onclick="onStack(7)">7</button>
+                <button class="btn btn-light small" id="8" onclick="onStack(8)">8</button>
+                <button class="btn btn-light small" id="9" onclick="onStack(9)">9</button>
+                <button class="btn btn-light small" id="0" onclick="onStack(0)">0</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-light small" id="+" onclick="onStackAdd()">+</button>
+                <button class="btn btn-light small" id="-" onclick="onStackSubtract()">-</button>
+                <button class="btn btn-light small" id="*" onclick="onStackMultiply()">*</button>
+                <button class="btn btn-light small" id="/" onclick="onStackDivide()">/</button>
+                <button class="btn btn-light small" id="." onclick="onStackDec()">.</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-primary btn-lg btn-block" id="equals" onclick="evaluate()">=</button>
+            </div>
+        </div>
         <script src="js/jquery.js" crossorigin="anonymous"></script>
         <script src="js/popper.js" crossorigin="anonymous"></script>
         <script src="js/bootstrap.js" crossorigin="anonymous"></script>

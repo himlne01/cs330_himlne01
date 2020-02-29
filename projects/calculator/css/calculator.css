@@ -1,0 +1,15 @@
+.calculator {
+    width: 550px;
+    padding: 100px;
+}
+
+.row {
+    width: 544px;
+    padding: 2px;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-light {
+    width: 102px;
+}
