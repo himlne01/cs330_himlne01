@@ -17,7 +17,8 @@ class theCalcStack {
         for (var things in this._stack) {
             this._stack.pop();
         }
-        return 0;
+        this._stack.push(0);
+        this._stack.get();
     }
     
     onStack(thing) {
@@ -25,30 +26,46 @@ class theCalcStack {
     }
     
     onStackAdd() {
+    	evaluate();
         this._stack.push("+");
     }
     
     onStackSubtract() {
+    	evaluate();
         this._stack.push("-");
+        
     }
     
     onStackMultiply() {
+        evaluate();
         this._stack.push("*");
     }
     
     onStackDivide() {
+    	evaluate();
         this._stack.push("/");
     }
     
     onStackDec() {
+    	evaluate();
         this._stack.push(".");
     }
     
     evaluate() {
+    	let numberOne="";
+    	let numberTwo="";
+    	let opFocus="";
         for (var n in this._stack){
+        	n = this._stack.pop();
             if (typeof(n) === "number") {
-                
+                numberOne.concat(n);
+            } else if (typeof(n) !== "number"){
+				opFocus = n
+				numberTwo = numberOne;
+				numberOne = ""
+				
             }
+        return numberOne opFocus numberTwo;
         }
     
     }
