@@ -26,46 +26,48 @@ class theCalcStack {
     }
     
     onStackAdd() {
-    	evaluate();
+    	this.evaluate();
         this._stack.push("+");
     }
     
     onStackSubtract() {
-    	evaluate();
+    	this.evaluate();
         this._stack.push("-");
         
     }
     
     onStackMultiply() {
-        evaluate();
+        this.evaluate();
         this._stack.push("*");
     }
     
     onStackDivide() {
-    	evaluate();
+    	this.evaluate();
         this._stack.push("/");
     }
     
     onStackDec() {
-    	evaluate();
         this._stack.push(".");
     }
     
     evaluate() {
     	let numberOne="";
     	let numberTwo="";
-    	let opFocus="";
+        let opFocus="";
+        
+        //Hopefully, disregard the change in signs. Don't make mistakes.
+
         for (var n in this._stack){
         	n = this._stack.pop();
             if (typeof(n) === "number") {
-                numberOne.concat(n);
+                numberOne=n+numberOne;
             } else if (typeof(n) !== "number"){
-				opFocus = n
+				opFocus = n;
 				numberTwo = numberOne;
-				numberOne = ""
+				numberOne = "";
 				
             }
-        return numberOne opFocus numberTwo;
+        console.log(numberOne, opFocus, numberTwo);
         }
     
     }
