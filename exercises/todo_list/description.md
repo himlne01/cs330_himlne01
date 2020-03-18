@@ -5,7 +5,6 @@ Implement the following TODO List functionality using HTML, CSS, and JavaScript.
 ## Design
 
 ![TODO List](todo_list_demo.gif)
-
 ## Functionality
 
 | Element | Type | Comment |

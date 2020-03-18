@@ -1,18 +1,33 @@
-/* jshint esversion: 6 */
+/* jshint esversion: 8 */
 /* jshint node: true */
 /* jshint browser: true */
 /* jshint jquery: true */
-'use strict';
+"use strict";
 
-class theCalcStack {
-    constructor(stack) {
-        this._stack = stack;
-    }
+let str = "";
+let total = "";
 
-    get stack() {
-        return this._stack;
-    }
+function onStack(given) {
+	if (total == '') {
+		clears();
+	}
+	total = total + given;
+	let ansBox = document.querySelector(".para");
+	ansBox.append(given);
+}
 
+function clears() {
+	let ansRow = document.querySelector("#theans");
+	let ansBox = document.querySelector(".para");
+	ansRow.removeChild(ansBox);
+	let p = document.createElement("p");
+	let textnode = document.createTextNode(' ');
+	p.appendChild(textnode);
+	p.classList = "para";
+	ansRow.appendChild(p);
+}
+
+<<<<<<< HEAD
     clearCalculator() {
         for (var things in this._stack) {
             this._stack.pop();
@@ -71,5 +86,17 @@ class theCalcStack {
         }
     
     }
+=======
+function clearsOne() {
+	clears();
+	total = "";
+>>>>>>> ef49e6f0366536cf8359971adbc3e4c8916d1e03
 }
 
+function evaluated() {
+	let ansRow = document.querySelector(".para");
+	clears();
+	ansRow = document.querySelector(".para");
+	ansRow.append(eval(total));
+	total = '';
+}
