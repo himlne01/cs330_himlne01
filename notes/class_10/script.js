@@ -1,6 +1,7 @@
 /* jshint esversion: 8 */
 /* jshint node: true */
 /* jshint jquery: true */
+/* jshint browser: true */
 'use strict';
 
 // fetch('https://jsonplaceholder.typicode.com/todos/1')

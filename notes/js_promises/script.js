@@ -13,7 +13,7 @@ async function populate() {
         getData("https://jsonplaceholder.typicode.com/comments"),
     ]);
 
-    console.log(posts);
+    // console.log(posts);
     // console.log(users);
     // console.log(comments);
     let postsDiv = document.querySelector("#posts");

@@ -22,7 +22,7 @@ async function async_func() {
     console.log("Calling resolve_with_wait");
     let result = await resolve_with_wait();
     console.log(result);
-    console.log("Done")
+    console.log("Done");
 }
 
 async_func();
