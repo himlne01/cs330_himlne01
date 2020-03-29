@@ -1,30 +1,52 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <title>TODO list</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+	<title>TODO list</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>TODO List</h1>
-    <div class='Task'>
-        <p>Task</p>
-    </div>
-    <div class='Assigned To'>
-        <p>Assigned To</p>
-    </div>
-    <div class='Priority'>
-        <p>Priority</p>
-    </div>
-    <div class='Due Date'>
-        <p>Due Date</p>
-    </div>
-    <button class='' id='' onClick=''></button>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+	<h1>To Do List</h1>
+	<div class='task n'>
+		<p>Task</p>
+		<input type='text' class="form-control" name='task' id='taskBox' placeholder="Enter Task"></input>
+	</div>
+
+	<div class='assignedTo n'>
+		<p>Assigned To</p>
+	</div>
+
+	<div class='priority n'>
+		<p>Priority</p>
+	</div>
+
+	<div class='dueDate n'>
+		<p>Due Date</p>
+		<input type='date' class="form-control" id='dateBox'></input>
+	</div>
+
+	<button class='btn btn-primary btn-lg btn-block' id='' onClick='addTask()'>Add Task</button>
+	<div class=space></div>
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">Done</th>
+				<th scope="col">Task</th>
+				<th scope="col">Assigned To</th>
+				<th scope="col">Priority</th>
+				<th scope="col">Due Date</th>
+			</tr>
+		</thead>
+		<tbody>
+
+		</tbody>
+	</table>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>

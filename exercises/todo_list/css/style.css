@@ -1,11 +1,35 @@
-.critical {
+body {
+	padding: 10px;
+}
+.n {
+	display: inline-block;
+	padding: 10px;
+}
+.btn {
+	margin: 20px 0px;
+}
+td .form-check {
+	text-align: center;
+	vertical-align: middle;
+}
+.ASAP {
+	background-color: #ff0033;
+	color: white;
 }
 
-.important {
+.Important {
+	background-color: #ff6a00;
 }
 
-.normal {
+.Casual {
+	background-color: #ffee00;
 }
 
-.low {
+.Low {
+	background-color: #73ff00;
+}
+
+.btn {
+	display: block;
+	padding: 10px;
 }

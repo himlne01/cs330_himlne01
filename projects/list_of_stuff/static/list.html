@@ -3,9 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+    <title>Shopping Made Easy</title>
 </head>
 <body>
-    
+    <h1>Shopping Made Easy</h1>
+    <h2>New Item</h2>
+    <div class=row id=top>
+        <div >
+            <p>Item Name</p>
+            <input type='text' class="form-control" name='item' id='itemName' placeholder="Item"></input>
+        </div>
+        <div>
+            <p>Quantity</p>
+        </div>
+        <div>
+            <p>Price</p>
+            <input type='text' class="form-control" name='price' id='price' placeholder="$"></input>
+        </div>
+    </div>
+    <div class=row id=bottom>   
+        <div>
+            <p>Store</p>
+        </div>    
+        <div>
+            <p>Section</p>
+        </div> 
+        <div>
+            <p>Priority</p>
+        </div> 
+    </div>
+    <button class='btn btn-primary btn-lg btn-block' id='' onClick='add()'>Add</button>
+    <h2>Shopping List</h2>
+    <table class=table>
+        <thead class="thead-dark">
+			<tr>
+				<th scope="col">Done</th>
+				<th scope="col">Item</th>
+				<th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">Store</th>
+                <th scope="col">Section</th>
+			</tr>
+		</thead>
+		<tbody>
+
+		</tbody>
+        <tfoot class="thead-dark">
+			<tr>
+				<th scope="col">Done</th>
+				<th scope="col">Item</th>
+				<th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">Store</th>
+                <th scope="col">Section</th>
+			</tr>
+		</tfoot>
+    </table>
+    <button class="left" onclick=save()>Save List</button>
+    <button class="right" onclick=removeOne()>Remove Purchased</button>
+    <button class="right" onclick=removeAll()>Remove All</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/controller.js"></script>
+    <script type="text/javascript" src="../js/model.js.js"></script>
+    <script type="text/javascript" src="../js/view.js.js"></script>
 </body>
 </html>

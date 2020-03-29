@@ -1,0 +1,20 @@
+* {
+    margin: 15px;
+}
+h1 {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+.row {
+    display: block;
+    margin: 15px;
+}
+p {
+    margin-bottom: 0.5rem;
+}
+input {
+    margin-bottom: 10px;
+}
+.btn-primary {
+    margin-bottom: 20px;
+}
