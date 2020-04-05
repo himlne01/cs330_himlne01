@@ -47,8 +47,8 @@ async function getPoem() {
         poemList = poemList ? JSON.parse(poemList) : [];
         let selNames = ["title", "author"];
         let newPoem = {};
-        newPoem[0] = theTitle;
-        newPoem[1] = theAuthor;
+        newPoem[selNames[0]] = theTitle;
+        newPoem[selNames[1]] = theAuthor;
         
         poemList.push(newPoem);
         localStorage.setItem("poem", JSON.stringify(poemList));
