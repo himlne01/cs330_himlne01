@@ -20,3 +20,13 @@ var sections = [
     "Electronics",
     "Gasoline"
 ];
+var team = [
+	"Bored Croissant" /*Claire*/,
+	"Toxic Oreo" /*Aaron*/,
+	"Tired Cookie" /*Rachelle*/,
+	"Overwhelmed Meatballs" /*Belle*/,
+	"Sad Pancakes" /*Megan*/,
+	"Disappointed Peanut Butter" /*Nell*/,
+	"Enraged Bagel" /*Will*/,
+	"Relaxed Chicken Noodle Hot Dish" /*Abbey*/
+];
