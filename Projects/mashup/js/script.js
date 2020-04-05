@@ -41,6 +41,18 @@ async function getPoem() {
         firstEl.setAttribute("class", "poemParas");
         firstEl.innerHTML = theTitle + " by " + theAuthor;
         theRow.appendChild(firstEl);
+
+        // Save title, author
+        let poemList = localStorage.getItem("poem");
+        poemList = poemList ? JSON.parse(poemList) : [];
+        let selNames = ["title", "author"];
+        let newPoem = {};
+        newPoem[0] = theTitle;
+        newPoem[1] = theAuthor;
+        
+        poemList.push(newPoem);
+        localStorage.setItem("poem", JSON.stringify(poemList));
+
         // Lines
         for (let ls in thePoemData[randomNumber].lines) {
             let secondEl = document.createElement("p");
