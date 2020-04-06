@@ -10,67 +10,71 @@
 <body>
     <h1>Shopping Made Easy</h1>
     <h2>New Item</h2>
-    <div class=row id=top>
-        <div >
-            <p>Item Name</p>
-            <input type='text' class="form-control" name='item' id='itemName' placeholder="Item"></input>
+    <div id=newMouse class="form-group">
+        <div class=row id=top>
+            <div class=col id=itemName>
+                <p>Item Name</p>
+                <input type='text' class="form-control" id='itemNameBox' placeholder="Item">
+            </div>
+            <div class=col id=quantity>
+                <p>Quantity</p>
+            </div>
+            <div class=col id=price>
+                <p>Price</p>
+                <input type='text' class="form-control" id='priceBox' placeholder="$">
+            </div>
         </div>
-        <div>
-            <p>Quantity</p>
+        <div class=row id=bottom>   
+            <div class=col id=store>
+                <p>Store</p>
+            </div>    
+            <div class=col id=section>
+                <p>Section</p>
+            </div> 
+            <div class=col id=priority>
+                <p>Priority</p>
+            </div> 
         </div>
-        <div>
-            <p>Price</p>
-            <input type='text' class="form-control" name='price' id='price' placeholder="$"></input>
-        </div>
+        <button class='btn btn-primary btn-lg btn-block' id="addBtn" onClick='addListItem()'>Add</button>
     </div>
-    <div class=row id=bottom>   
-        <div>
-            <p>Store</p>
-        </div>    
-        <div>
-            <p>Section</p>
-        </div> 
-        <div>
-            <p>Priority</p>
-        </div> 
-    </div>
-    <button class='btn btn-primary btn-lg btn-block' id='' onClick='add()'>Add</button>
+    <div class=space></div>
     <h2>Shopping List</h2>
     <table class=table>
         <thead class="thead-dark">
 			<tr>
-				<th scope="col">Done</th>
+				<th scope="col">Purchased</th>
 				<th scope="col">Item</th>
 				<th scope="col">Quantity</th>
                 <th scope="col">Price</th>
                 <th scope="col">Store</th>
                 <th scope="col">Section</th>
+                <th scope="col">Priority</th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody id=listAll>
 
 		</tbody>
         <tfoot class="thead-dark">
 			<tr>
-				<th scope="col">Done</th>
+				<th scope="col">Purchased</th>
 				<th scope="col">Item</th>
 				<th scope="col">Quantity</th>
                 <th scope="col">Price</th>
                 <th scope="col">Store</th>
                 <th scope="col">Section</th>
+                <th scope="col">Priority</th>
 			</tr>
 		</tfoot>
     </table>
-    <button class="left" onclick=save()>Save List</button>
-    <button class="right" onclick=removeOne()>Remove Purchased</button>
-    <button class="right" onclick=removeAll()>Remove All</button>
-
+    <button class="btn btn-secondary left" id=saveBtn onclick=save()>Save List</button>
+    <button class="btn btn-secondary right" id=rmaBtn onclick=removeAll()>Remove All</button>
+    <button class="btn btn-secondary right" id=rmBtn onclick=removePurchased()>Remove Purchased</button>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../js/controller.js"></script>
-    <script type="text/javascript" src="../js/model.js.js"></script>
-    <script type="text/javascript" src="../js/view.js.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
 </body>
 </html>

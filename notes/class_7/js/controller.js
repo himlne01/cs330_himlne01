@@ -42,4 +42,4 @@ function addMouse() {
 window.onload = function() {
     populateSelectOption("#mouseConnection", this.connections);
     populateSelectOption("#mouseColor", this.colors);
-}
+};

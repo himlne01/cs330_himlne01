@@ -21,13 +21,13 @@ Buttons *Add*, *Save*, *Remove*, and *Clear* must perform the following tasks:
 
 ## Grading criteria
 
-1. Use Model-View-Controller pattern
-2. Load the list from local storage, if present
-3. Add new item to the shopping list on button click
-4. Save the list to local storage on button click
-5. Remove all **checked** items from the shopping list on button click
-6. Remove **all** items from the list on button click
-7. Validate input fields. Do not accept empty values
-8. Use checkbox and an item title to mark an item as checked
-9. Consistent design using Bootstrap
-10. Code is error-free
+01. Use Model-View-Controller pattern
+02. Load the list from local storage, if present
+    03. Add new item to the shopping list on button click
+    04. Save the list to local storage on button click
+    05. Remove all **checked** items from the shopping list on button click
+    06. Remove **all** items from the list on button click
+x07. Validate input fields. Do not accept empty values
+08. Use checkbox and an item title to mark an item as checked
+x09. Consistent design using Bootstrap
+x10. Code is error-free

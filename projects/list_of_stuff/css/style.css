@@ -1,0 +1,59 @@
+body {
+    margin: 10px;
+	padding: 10px;
+}
+.row {
+	margin-left: 0px;
+}
+.col {
+    width: 33%;
+}
+p {
+    padding-top: 15px;
+}
+.btn {
+	margin: 20px 0px;
+}
+.btn:hover {
+    opacity: 80%;
+}
+#addBtn {
+    background-color: #6c6cf0;
+    border-color: #6c6cf0;
+}
+/* td .form-check {
+	text-align: center;
+	vertical-align: middle;
+} */
+.right {
+    float: right;
+    margin-left: 15px;
+}
+
+.If {
+    background-color: #aef06c;
+}
+.Kinda {
+    background-color: #6cf0c8;
+}
+.Need {
+    background-color: #6c6cf0;
+}
+.Life {
+    background-color: #f06ca9;
+}
+#saveBtn {
+    color: #212529;
+    background-color: #aef06c;
+    border-color: #aef06c;
+}
+#rmBtn {
+    color: #212529;
+    background-color: #6cf0c8;
+    border-color: #6cf0c8;
+}
+#rmaBtn {
+    color: #212529;
+    background-color: #f06ca9;
+    border-color: #f06ca9;
+}
