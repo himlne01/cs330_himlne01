@@ -90,7 +90,7 @@ class List extends Subject {
         this.publish("New list item add, list all", this.fullList);
     }
     
-    // remove purchased
+    // remove purchased one at a time
     removeChecked() {
         for (let item of this.fullList) {
             if (item[0] == true) {

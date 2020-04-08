@@ -32,14 +32,14 @@ def number(n):
 def play_game():
     if request.method == "GET":
         a_number = request.cookies.get("number")
-        if a_number:
-            return render_template("result.html", number=a_number)
-        else:
+        if a_number: # Get first page to enter number
+            return render_template("result.html", jokes=a_number) #var ‘number"
+        else: # Get to home page again
             return render_template("guess.html")
-    else:  # POST
+    else:  # POST 
         response = make_response(redirect(url_for("play_game"), code=303))
-        if request.form.get("done"):
+        if request.form.get("done"): # finished posted the form, reset
             response.set_cookie("number", "", expires=0)
-        else:
+        else: #record the number, shows second page
             response.set_cookie("number", request.form.get("number"))
         return response

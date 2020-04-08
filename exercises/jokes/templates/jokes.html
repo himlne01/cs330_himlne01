@@ -1,3 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
+
+<h2>沙诗琪的不好笑的笑话!</h2>
+
+
+<table class=table>
+    {% for j in jokes %}
+    <tr><td>{{ j }}</td></tr>
+    {% endfor %}
+</table>
+
+<form action="/" method="POST">
+    <div class=container>
+        <br>
+        <input type="submit" class="btn btn-warning btn-lg" value="回家" name="done">
+    </div>
+</form>
+
 {% endblock %}
