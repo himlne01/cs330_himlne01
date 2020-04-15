@@ -1,15 +1,15 @@
 /* jshint esversion: 8 */
 /* jshint node: true */
 /* jshint browser: true */
-'use strict'
+'use strict';
 
-const BASE_URL = "http://localhost:5000/api/v1"
+const BASE_URL = "http://localhost:5000/api/v1";
 
 async function requestData(typeOfData) {
     return fetch(`${BASE_URL}/${typeOfData}`)
     .then(response => response.json())
     .then(json => printData(json[typeOfData]))
-    .catch(error => console.log(error))
+    .catch(error => console.log(error));
 }
 
 function printData(data) {

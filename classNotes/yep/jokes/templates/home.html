@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>您想什么样的笑话？ 什么语言？ 多少笑话？</h3>
+
+<form action="/" method="POST">    
+    <div class="category">
+        <h4>什么样</h4>
+        <select class="form-control form-control-lg select_populated" name=catgory>
+            <option name=catgory value=neutral>正常</option>
+            <option name=catgory value=chuck>查克诺里斯</option>
+            <option name=catgory value=all>很多</option>
+        </select>
+    </div>
+    <div class="language">
+        <h4>什么语言</h4>
+        <select class="form-control form-control-lg select_populated" name=languag>
+            <option name=languag value=en>英语</option>
+            <option name=languag value=es>西班牙语</option>
+            <option name=languag value=it>意大利语</option>
+        </select>
+    </div>
+    <div class="number">
+        <h4>多少</h4>
+        <select class="form-control form-control-lg select_populated" name=numbr>
+            <option name=numbr value=1>一个</option>
+            <option name=numbr value=5>五个</option>
+            <option name=numbr value=10>十个</option>
+        </select>
+    </div>
+    <input type="submit" class="btn btn-warning btn-lg btn-block" name="buttons" value="让我发笑!">
+</form>
+
+{% endblock %}
