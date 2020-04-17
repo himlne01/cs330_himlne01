@@ -4,13 +4,12 @@ jokes api
 """
 
 import json
-import random
 import pyjokes
-from flask import Flask, Response, jsonify
-from flask_cors import CORS, cross_origin
+from flask import Flask, Response
+# from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 
 @app.route("/api/v1/jokes")
 def rand_joke():
@@ -24,10 +23,10 @@ def specific_joke(n):
     if n in range(1, 1+len(pyjokes.jokes_en.neutral)):
         res = Response(json.dumps({"random_joke": pyjokes.jokes_en.neutral[n-1] }))
     else:
-        res = Response(json.dumps({"random_joke": "You are not funny. Choose a different number."}))        
+        res = Response(json.dumps({"random_joke": "You are not funny. Choose a different number."}))
     res.headers["Access-Control-Allow-Origin"] = "*"
     res.headers["Content-Type"] = "application/json"
     return res
 
 if __name__ == "__main__":
-    app.run("0.0.0.0")
+    app.run()
