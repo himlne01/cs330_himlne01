@@ -4,13 +4,12 @@ jokes api
 """
 
 import json
-import random
 import pyjokes
 from flask import Flask, Response, jsonify
-from flask_cors import CORS, cross_origin
+# from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 
 @app.route("/api/v1/jokes")
 def rand_joke():
@@ -30,4 +29,4 @@ def specific_joke(n):
     return res
 
 if __name__ == "__main__":
-    app.run("0.0.0.0")
+    app.run()
