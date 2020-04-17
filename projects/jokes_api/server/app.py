@@ -5,7 +5,7 @@ jokes api
 
 import json
 import pyjokes
-from flask import Flask, Response, jsonify
+from flask import Flask, Response
 # from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
@@ -23,7 +23,7 @@ def specific_joke(n):
     if n in range(1, 1+len(pyjokes.jokes_en.neutral)):
         res = Response(json.dumps({"random_joke": pyjokes.jokes_en.neutral[n-1] }))
     else:
-        res = Response(json.dumps({"random_joke": "You are not funny. Choose a different number."}))        
+        res = Response(json.dumps({"random_joke": "You are not funny. Choose a different number."}))
     res.headers["Access-Control-Allow-Origin"] = "*"
     res.headers["Content-Type"] = "application/json"
     return res
