@@ -1,0 +1,6 @@
+{
+  "name": "Heroku Tutorial",
+  "description": "A tutorial for the Heroku CSS workshop 2018.",
+  "repository": "https://github.com/alexanderldavis/herokuTutorial",
+  "keywords": ["heroku", "tutorial"]
+}
