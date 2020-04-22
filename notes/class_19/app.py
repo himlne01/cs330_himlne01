@@ -20,7 +20,7 @@ def index():
 
     if request.method == "GET":
         return render_template("index.html")
-    if request.form.get("country"):
+    if request.form.get("country"): #select name=country 
         country = request.form.get("country")
         if country in CACHE:
             result = CACHE[country]

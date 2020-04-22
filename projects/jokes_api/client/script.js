@@ -4,8 +4,8 @@
 /* jshint jquery: true */
 'use strict';
 
-const BASE_URL = "http://localhost:5000/api/v1/jokes";
-const BASIC_URL = "http://localhost:5000/api/v1";
+const BASE_URL = "http://himlne01.pythonanywhere.com/api/v1/jokes";
+const BASIC_URL = "http://himlne01.pythonanywhere.com/api/v1";
 
 async function getData(url) {
 	return fetch(url)
