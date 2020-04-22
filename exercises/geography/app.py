@@ -7,9 +7,7 @@ def get_data_from_db(query: str) -> list:
     """retrieve data from the database and return to the user"""
     db = sqlite3.connect('world.sqlite3')
     rows = db.execute(query)
-    # print(rows) <sqlite3.Cursor object>
     return rows
-
 
 @app.route("/", methods=["GET", "POST"])
 def index():
