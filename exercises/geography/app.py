@@ -1,5 +1,7 @@
 from flask import Flask, request, render_template
 import sqlite3
+# import psycopg2
+# import records
 
 app = Flask(__name__)
 
@@ -7,7 +9,17 @@ def get_data_from_db(query: str) -> list:
     """retrieve data from the database and return to the user"""
     db = sqlite3.connect('world.sqlite3')
     rows = db.execute(query)
-    return rows
+    return rows               # the stuff that works
+    
+    # conn = records.Database("postgres://himlne01:@localhost:2343/world") #"postgresql://yasiro01:@knuth.luther.edu/world"
+    # cur = conn.cursor()       #psycopg2, user="himlne01", host="localhost", port=2345, dbname="world"
+    # rows = cur.execute(query)
+    # return rows
+
+    # words = 'f"postgres://'+ user +':@' + host + ':' + port +'"'
+    # db = records.Database(words)          #f"postgres://{user}:@{host}:{port}")
+    # rows = db.query(query)
+    
 
 @app.route("/", methods=["GET", "POST"])
 def index():
