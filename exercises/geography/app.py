@@ -1,6 +1,5 @@
-import requests
-from flask import Flask, request, render_template, send_from_directory
-from flask import redirect, url_for
+# import requests
+from flask import Flask, request, render_template, redirect
 import sqlite3
 # import sys
 # import pandas as pd
