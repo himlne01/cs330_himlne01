@@ -1,5 +1,5 @@
 # import requests
-from flask import Flask, request, render_template, redirect
+from flask import Flask, request, render_template
 import sqlite3
 # import sys
 # import pandas as pd
