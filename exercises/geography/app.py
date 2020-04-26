@@ -9,10 +9,14 @@ def get_data_from_db(query: str) -> list:
     """retrieve data from the database and return to the user"""
     db = sqlite3.connect('world.sqlite3')
     rows = db.execute(query)
-    return rows               # the stuff that works
+    return rows               
+    
+    # the stuff that works
     
     # conn = records.Database("postgres://himlne01:@localhost:2343/world") #"postgresql://yasiro01:@knuth.luther.edu/world"
-    # cur = conn.cursor()       #psycopg2, user="himlne01", host="localhost", port=2345, dbname="world"
+    
+    # conn = psycopg2.connect(user="Nell", host="localhost", port=2343, dbname="world")
+    # cur = conn.cursor()       #psycopg2, 
     # rows = cur.execute(query)
     # return rows
 
@@ -61,5 +65,5 @@ def search(scope: str):
         world_data = get_data_from_db("SELECT DISTINCT continent,continent FROM country;")
         return render_template("continent.html", options=world_data)
 
-if __name__ == "__main__":
-    app.run()
+# if __name__ == "__main__":
+#     app.run()
