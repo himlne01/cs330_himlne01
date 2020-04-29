@@ -1,7 +1,9 @@
 import psycopg2
 from flask import Flask, make_response, redirect, render_template, request, url_for
 
-app = Flask(__name__)
+def create_app():
+    app = Flask(__name__)
+    return app
 
 def get_data_from_db(query: str) -> list:
     conn = psycopg2.connect(

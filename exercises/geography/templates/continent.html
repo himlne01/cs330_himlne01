@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="mui-container">
+    <h2>Find Information</h2>
+    <form action="/" method="POST" class="mui-form">
+        <div class="mui-row">
+            <div class="mui-col">
+                <div class="mui-select">
+                    <select name="continent">
+                        {% for o in options %}
+                        <option value="{{o[0]}}">{{o[1]}}</option>
+                        {% endfor %}
+                    </select>
+                    <label>Select a continent</label>
+                </div>
+            </div>
+            <div class="mui-col">
+                <input type="submit" class="mui-btn mui-btn--primary" value="Get Info">
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
