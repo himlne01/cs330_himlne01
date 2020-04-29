@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- get the dang db -->
+<h2>Let's all buy ice cream!</h2>
+<table id="iceCream" class="mui-table">
+    <thead>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Quantity</th>
+    </thead>
+    <tbody>
+        {% for s in iceCream %}
+        <tr>
+            <td>{{ s[0] }}</td>
+            <td>{{ s[1] }}</td>
+            <td>{{ s[2] }}</td>
+            <td>{{ s[3] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

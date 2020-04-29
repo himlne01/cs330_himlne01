@@ -5,11 +5,16 @@ app = Flask(__name__)
 
 def get_data_from_db(query: str) -> list:
     conn = psycopg2.connect(
-        database = "inventory",
-        user="postgres",
-        password="nnnnnnnn",
-        host="localhost",
+        database = "daqj1d7gm0fvcn",
+        user="mdtbclhttkczxo",
+        password="ed7f7afc595ede2cea13630c0ef7f1082346763235e31f5f5cf3ff9ae9085b94",
+        host="ec2-34-233-186-251.compute-1.amazonaws.com",
         port="5432"
+        # database = "inventory",
+        # user="postgres",
+        # password="nnnnnnnn",
+        # host="localhost",
+        # port="5432"
     )
     cur = conn.cursor()
     cur.execute(query)

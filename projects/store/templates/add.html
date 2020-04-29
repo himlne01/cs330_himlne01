@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="mui-container">
+    <h2>Administration</h2>
+    <form action="/add" method="POST" class="mui-form">
+        <div class="mui-row">
+            <div class="mui-col">
+                <input type=text name=flavor>
+                <label>Name</label>
+                <input type=text name=price>
+                <label>Price</label>
+                <h2> </h2>
+                <div class="mui-select">
+                    <select name="category">
+                        {% for o in ['chocolate','fruit', 'savory', 'no sugar', 'Vanilla'] %}
+                        <option value="{{o}}">{{o}}</option>
+                        {% endfor %}
+                    </select>
+                    <label>Category</label>
+                </div>
+                <div class="mui-select">
+                    <select name="quantity">
+                        {% for s in range(1,10) %}
+                        <option value="{{s}}">{{s}}</option>
+                        {% endfor %}
+                    </select>
+                    <label>Quantity</label>
+                </div>
+            </div>
+            <div class="mui-col">
+                <input type="submit" class="mui-btn mui-btn--primary" value="Update Inventory">
+                <button class="mui-btn mui-btn--flat"><a href="/list">List Inventory</a></button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<table id="iceCream" class="mui-table">
+    <thead>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <!-- <th>Purchase</th> -->
+    </thead>
+    <tbody>
+        {% for s in iceCream %}
+        <tr>
+            <td>{{ s[0] }}</td>
+            <td>{{ s[1] }}</td>
+            <td>{{ s[2] }}</td>
+            <td>{{ s[3] }}</td>
+            <!-- <td>
+                <button class="mui-btn mui-btn--fab mui-btn--accent" onclick="decrease()">-</button>
+            </td> -->
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}
