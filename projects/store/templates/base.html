@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Creamery | Top Tier Ice Cream in Rushford, MN</title>
+    <!-- load MUI -->
+    <link href="//cdn.muicss.com/mui-0.10.1/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.10.1/js/mui.min.js"></script>
+    <!-- <link href="../css/style.css" rel="stylesheet" type="text/css" /> -->
+    <style>
+        h1 > a { color:rgb(179, 0, 89); } 
+        body { margin: 10px; }
+        .mui-btn--primary { background-color: rgb(179, 0, 89); }
+        .mui-btn--primary:hover { background-color: rgb(88, 0, 44); }
+        form { padding: 15px; }
+    </style>
+</head>
+<body>
+    <header class= "mui-panel">
+        <table>
+            <tr class="mui--appbar-height">
+                <td>
+                    <h1 class=mui--text-left ><a href="/">The Creamery</a></h1>
+                </td>
+                <td class="mui--text-right">
+                    <img src="https://static.wixstatic.com/media/e399f2_43b85e95fe20487ab97e37f25bc1630d~mv2.png/v1/fill/w_145,h_145,al_c,lg_1,q_85/logo_0.webp" alt="Chocolate Shoppe Ice cream logo">
+                </td>
+            </tr>
+        </table>
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
