@@ -47,6 +47,8 @@ def list():
     db=get_data_from_db(query)
     return render_template("list.html", iceCream=db)
 
+# The Creamery is my hometown's "Sugar Bowl". This restaurant has the same kind of ice cream!
+
 # I'm just going to acknowledge that there is no way to decrease
 # the inventory, which is very important to the store.
 # Since it wasn't in the .md, I will do it another time.
