@@ -1,29 +1,26 @@
 import psycopg2
 from flask import Flask, make_response, redirect, render_template, request, url_for
 
-# def create_app():
 app = Flask(__name__)
-    # return app
 
 def get_data_from_db(query: str) -> list:
     conn = psycopg2.connect(
-        database = "dqq9otsot3o58",
-        user="snpszposoqyjmu",
-        password="61198af4d3436cef0a226f1e76a3ac3dc6dac565f244d0df4df595ba0183160f",
+        database = "df6nbl9cailf34",
+        user="pupbxjmwyohirl",
+        password="7f27a22911adcc76953d67166c4f834d33e084b166e17416c677440f524eb917",
         host="ec2-54-159-112-44.compute-1.amazonaws.com",
         port="5432"
         # database = "inventory",
         # user="postgres",
         # password="nnnnnnnn",
-        # host="localhost",
-        # port="5432"
+        # host="localhost"
     )
     cur = conn.cursor()
     cur.execute(query)
 
     if query[0] == 'I':
         conn.commit()
-        display = 'SELECT * FROM users;'
+        display = 'SELECT * FROM icecream;'
         # display = 'SELECT * FROM public."inventoryTable";'
         cur.execute(display)
     rows = cur.fetchall()
@@ -36,7 +33,7 @@ def index():
 @app.route("/add", methods=["GET", "POST"])
 def add():
     if request.method == "GET":
-        query = 'SELECT * FROM users;'
+        query = 'SELECT * FROM icecream;'
         # query = 'SELECT * FROM public."inventoryTable";'
         db=get_data_from_db(query)
         return render_template("add.html", iceCream=db)
@@ -46,7 +43,7 @@ def add():
         price = request.form.get("price")
         quantity = request.form.get("quantity")
 
-        query = "INSERT INTO users (name, category, price, quantity) VALUES ('" + name + "', '" + category + "', '" + price + "', '" + quantity + "');"
+        query = "INSERT INTO icecream (name, category, price, quantity) VALUES ('" + name + "', '" + category + "', '" + price + "', '" + quantity + "');"
         # query = "INSERT INTO public.\"inventoryTable\" (name, category, price, quantity) VALUES ('" + name + "', '" + category + "', '" + price + "', '" + quantity + "');"
         db=get_data_from_db(query)
 
@@ -54,7 +51,7 @@ def add():
 
 @app.route("/list")
 def list():
-    query = 'SELECT * FROM users;'
+    query = 'SELECT * FROM icecream;'
     # query = 'SELECT * FROM public."inventoryTable";'
     db=get_data_from_db(query)
     return render_template("list.html", iceCream=db)
