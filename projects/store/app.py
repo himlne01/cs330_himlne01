@@ -1,13 +1,15 @@
 import psycopg2
+import os
 from flask import Flask, make_response, redirect, render_template, request, url_for
 
 app = Flask(__name__)
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 def get_data_from_db(query: str) -> list:
     conn = psycopg2.connect(
         database = "df6nbl9cailf34",
         user="pupbxjmwyohirl",
-        password="7f27a22911adcc76953d67166c4f834d33e084b166e17416c677440f524eb917",
+        password=SECRET_KEY,
         host="ec2-54-159-112-44.compute-1.amazonaws.com",
         port="5432"
         # database = "inventory",
