@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<h2>Welcome, {{ inUse }}!</h2>
+<form action="/logout" method="POST" class="mui-form">
+    <button type="submit" class="mui-btn mui-btn--raised mui-btn--accent">Logout</button>
+</form>
 {% endblock %}

@@ -1,5 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<form action="/login" method="POST" class="mui-form">
+    <legend>Login</legend>
+    <div class="mui-select">
+      <select name=username>
+        <optgroup label="Birds with Feelings">
+            <option>Exhausted Pigeon</option>
+            <option>Night Owl</option>
+            <option>Early Bird</option>
+            <option>Fiery Phoenix</option>
+        </optgroup>
+        <optgroup label="K-Pop, Of Course!">
+          <option>Amber Llama</option>
+          <option>Agust D</option>
+          <option>Jiminie</option>
+          <option>Every rapping monster ever</option>
+          <option>Hope</option>
+        </optgroup>
+        <optgroup label="CS@L-U-T-H-E-R">
+            <option>All-Powerful Greek</option>
+            <option>Big Sis</option>
+            <option>Travelling President</option>
+            <option>Stonky Vampire</option>
+            <option>Stars</option>
+          </optgroup>
+      </select>
+      <label>Select Username</label>
+    </div>
+    <button type="submit" class="mui-btn mui-btn--raised mui-btn--accent">Login</button>
+  </form>
 {% endblock %}
