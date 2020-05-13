@@ -1,0 +1,122 @@
+/*mobile*/
+* {
+  color: black;
+  font-family: Poppins;
+  text-align: center;  
+  border: 0px;
+  margin: 0;
+}
+img { 
+  width: 100%;
+  height: 193px; /*auto*/
+  opacity: 0.5;
+}
+.allIndex {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.aboutside {
+  background-color: white;
+  opacity: .7;
+  display: inline-table;
+  margin: auto;
+}
+.side {
+  margin:.5em;
+}
+.mainbody {
+  width: 99%; 
+  padding: 1%;
+  display: inline-block;
+}
+.mui-appbar {
+  background-color: rgb(238, 188, 179);
+}
+.tbl {
+  width: inherit;
+}
+.td {
+  padding: .5em;
+}
+h1 {
+  font-family: Satisfy;
+  font-size: 55px;
+  margin-top: 1em;
+}
+p {
+  text-align: left;
+  margin: 1em;
+}
+th, td, a {
+  font-family: 'Anonymous Pro', monospace;
+  color: white;
+  font-size: 20px;
+}
+a:hover {
+  color: rgb(57, 39, 49);
+}
+.a {
+  background-color: #c09e9d;
+}
+.b {
+  background-color: #e99f70;
+}
+.c {
+  background-color: #e17e5f;
+}
+.school {
+  border: 1px rgb(57, 39, 49) solid;
+}
+.words /*links*/ {
+  font-family: Poppins;
+  color: rgb(238, 188, 179); /*#feeedc;*/ 
+  margin: 1em;
+}
+li {
+  text-align: left;
+}
+footer {
+  right: 20;
+  bottom: 0;
+}
+footer p {
+  text-align: right;
+  margin-bottom: 10px;
+  padding:  5px;
+  background-color: white; /*rgb(251, 238, 236);*/
+  opacity: .7;
+  display: inline-block;
+}
+.middles {
+  float: center;
+  margin: 100px;
+}
+/*tablet*/
+@media screen and (min-width: 768px) {
+  .aboutside {
+    width: 675px; 
+  }
+  .mainbody {
+    width: 725px;
+  }
+  img {
+    height: 492px; /*60%*/
+  }
+}
+/*desktop*/
+@media screen and (min-width: 1225px) {
+  .aboutside {
+    width: 275px;
+    padding: 1%;
+  }
+  .mainbody {
+    width: 865px; 
+    display: inline-table;
+  }
+  img {
+    height: 100%;
+    width: auto;
+  }
+}

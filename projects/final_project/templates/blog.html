@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}  
+<div>
+    <div class="aboutside">
+        <h4 class='side'>Word of the Day</h4>  
+        <p class='side'>{{ specs[0] }}</p>
+        <p class='side'>{{ specs[1] }}</p>
+        <a class='words side' href="../">Return Home</a>
+    </div>
+    <div class='mainbody'>
+        <h3>{{ specs[3] }}</h3>
+        <p>{{ specs[2] }}</p>
+    </div>
+</div>
+{% endblock %}
+
