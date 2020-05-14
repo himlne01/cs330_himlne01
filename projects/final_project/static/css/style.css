@@ -32,7 +32,7 @@
   display: inline-block;
 }
 .mui-appbar {
-  background-color: rgb(238, 188, 179);
+  background-color: rgb(179, 217, 255);
 }
 .tbl {
   width: inherit;
@@ -56,13 +56,18 @@ p {
   text-align: left;
   margin: 1em;
 }
-th, td, a {
+th, td {
   font-family: 'Anonymous Pro', monospace;
   color: white;
   font-size: 20px;
 }
-a:hover {
+a {
+  font-family: 'Anonymous Pro', monospace;
   color: rgb(57, 39, 49);
+  font-size: 20px;
+}
+a:hover {
+  color: white;
 }
 .a {
   background-color: #c09e9d;
