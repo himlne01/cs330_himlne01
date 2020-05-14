@@ -23,8 +23,9 @@
   display: inline-table;
   margin: auto;
 }
-.side {
+.sideblog {
   margin:.5em;
+  border: 1px rgb(57, 39, 49) solid;
 }
 .mainbody {
   width: 99%; 
@@ -52,6 +53,9 @@ h2 {
 h3 {
   margin: .75em;
 }
+h4 {
+  padding-top: 10px;
+}
 p {
   text-align: left;
   margin: 1em;
@@ -69,22 +73,14 @@ a {
 a:hover {
   color: white;
 }
-.a {
-  background-color: #c09e9d;
-}
 .b {
   background-color: #e99f70;
 }
 .c {
   background-color: #e17e5f;
 }
-.school {
-  border: 1px rgb(57, 39, 49) solid;
-}
-.words /*links*/ {
-  font-family: Poppins;
-  color: rgb(238, 188, 179); /*#feeedc;*/ 
-  margin: 1em;
+.d {
+  background-color: #c09e9d;
 }
 li {
   text-align: left;
@@ -101,10 +97,6 @@ footer p {
   opacity: .7;
   display: inline-block;
 }
-.middles {
-  float: center;
-  margin: 100px;
-}
 /*tablet*/
 @media screen and (min-width: 768px) {
   .aboutside {
@@ -114,7 +106,7 @@ footer p {
     width: 725px;
   }
   .hangzhou {
-    height: 492px; /*60%*/
+    height: 490px; /*60%*/
   }
 }
 /*desktop*/
@@ -128,6 +120,6 @@ footer p {
     display: inline-table;
   }
   .hangzhou {
-    max-height: 100%;
+    height: 100%;
   }
 }

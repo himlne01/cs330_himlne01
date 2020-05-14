@@ -5,9 +5,8 @@
     <div class='mainbody'>
         <h3>Search</h3>
         <p>Please return to the <a href="../">calendar</a> and look for the day.</p>
-        <!-- <h6>{{ specs[5] }} | {{ specs[1] }}</h6> -->
         <ul>
-            {% for o in options %} <!-- For all the dates with results -->
+            {% for o in options[0] %} <!-- For all the dates with results -->
             <li>{{ o }}</li>
             {% endfor %}
         </ul>
