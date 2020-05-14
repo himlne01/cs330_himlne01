@@ -30,9 +30,14 @@
                 <h3>You made my day</h3>
             </td>
             <td class="mui--appbar-height" >
-                <form action="/search" method="POST">
+                <form action="/" method="POST">
+                  <select name=category>
+                    {% for ops in ['titles','themes','entry'] %}
+                    <option name="{{ ops }}" value="{{ ops }}">{{ ops }}</option>
+                    {% endfor %}
+                  </select>
                     <input class="mui--text-right" type="text" name="searchith" required>
-                    <input type="submit" class="mui-btn mui-btn--small mui-btn--primary" value="Search Themes">
+                    <input type="submit" class="mui-btn mui-btn--small mui-btn--primary" value="Search">
                 </form>
             </td>
           </tr>
@@ -50,7 +55,7 @@
                 <td class='d'><a class='d n' href="blog/06-01">01</a></td>
                 <td class='b'><!--<a class='b' href="">-->02<!--</a>--></td>
                 <td class='c'><!--<a class='c' href="">-->03<!--</a>--></td>
-                <td class='d'><a class='d n' href="blog/06-04">04</a></td>
+                <td class='d'><!--<a class='d' href="">-->04<!--</a>--></td>
                 <td class='b'><!--<a class='b' href="">-->05<!--</a>--></td>
                 <td class='c'><!--<a class='c' href="">-->06<!--</a>--></td>
                 <td class='d'><!--<a class='d' href="">-->07<!--</a>--></td>
@@ -282,11 +287,19 @@
               </tr>
           </table>
         </div>
-        <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d441105.500264125!2d119.89169242595658!3d30.261685452555447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x344bb629439aaa99%3A0xa7bfd183824de83a!2sHangzhou%2C+Zhejiang%2C+China!5e0!3m2!1sen!2sus!4v1559097057554!5m2!1sen!2sus" width="600" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>-->
       </div>
       <footer>
+        <a href="https://www.linkedin.com/in/nell-himlie">
+          <img alt="facebook, Nell Himlie" src="../static/linkedin.png"
+          width=30" height="30">
+       </a>
         <p>&copy; 2019 NELL_JOY</p>
+        <a href="https://github.com/himlne01">
+          <img alt="facebook, Nell Himlie" src="../static/github.png"
+          width=30" height="30">
+       </a>
       </footer>
     </div>
+    <!-- <script type="text/javascript" src="script.js"></script> -->
   </body>
 </html>
