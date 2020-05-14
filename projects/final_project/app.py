@@ -32,6 +32,13 @@ def journal(theDate):
     # big={'words': get_data_from_db(query_words),'journal':get_data_from_db(query_journal), 'rbt':get_data_from_db(query_rbt)}
     return render_template("blog.html") #, specs=big) 
 
+@app.route("/blog/06-04")
+def enter():
+    # query_words = "SELECT * FROM wordofday WHERE date = '" + theDate + "';"
+    # query_journal = "SELECT * FROM journaling WHERE date = '" + theDate + "';"
+    # query_rbt = "SELECT * FROM flowers WHERE date = '" + theDate + "';"
+    # big={'words': get_data_from_db(query_words),'journal':get_data_from_db(query_journal), 'rbt':get_data_from_db(query_rbt)}
+    return render_template("blog.html") #, specs=big) 
 
 @app.route("/search", methods=["POST"])
 def search():
