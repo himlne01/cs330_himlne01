@@ -43,7 +43,14 @@ img {
 h1 {
   font-family: Satisfy;
   font-size: 55px;
-  margin-top: 1em;
+  margin: .5em 0;
+}
+h2 {
+  margin-bottom: 1em;
+  background: no-repeat;
+}
+h3 {
+  margin: .75em;
 }
 p {
   text-align: left;
@@ -116,7 +123,6 @@ footer p {
     display: inline-table;
   }
   img {
-    height: 100%;
-    width: auto;
+    max-height: 100%;
   }
 }

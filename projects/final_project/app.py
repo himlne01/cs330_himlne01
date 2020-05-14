@@ -55,7 +55,7 @@ def index():
 def entry(m):
     theDate=m #+'-'+d
     # query = 'SELECT * FROM icecream;'
-    db = ['word','meaning','words of the blog', m]
+    db = ['titles','themes' ,'word','meaning','words of the blog', m]
     # query = 'SELECT * FROM public."inventoryTable";'
     # db=get_data_from_db(query)
     return render_template("/blog.html", specs=db) #date=theDate,
