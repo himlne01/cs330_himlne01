@@ -1,6 +1,6 @@
 import psycopg2
 import os
-from flask import Flask, make_response, redirect, render_template, request, url_for
+from flask import Flask, render_template, request
 from pexels_api import API
 
 app = Flask(__name__)
